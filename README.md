@@ -1,4 +1,4 @@
 ### Django test
 - [x] Install pip
-- [ ] Install django
+- [x] Install django
 - [ ] Make test blog
