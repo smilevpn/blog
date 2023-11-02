@@ -9,11 +9,18 @@
     <header>
       <h1><a href="{% url 'home' %}">Django blog</a></h1>
     </header>
-    <div class="postss">
-      <div>
+    <main class="main">
+    <div class="main__posts">
+      <div class="main__posts__post">
       {% block content %}
       {% endblock content %}
       </div>
     </div>
+    </main>
+    <footer>
+    <div>
+            <p>{% lorem 1 b random %}</p>
+    </div>
+	</footer>
   </body>
 </html>

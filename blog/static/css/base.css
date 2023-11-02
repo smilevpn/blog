@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nixie+One&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +7,9 @@
     /*flex-direction: column;*/
 }
 body {
+
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
-    text-align: center;
     background-color: #99ff00;
 }
 
@@ -34,12 +36,28 @@ header h1 a {
   padding-top: 2rem;
 }
 
+.test {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+}
+
 .post-entry {
-  margin-bottom: 2rem;
+	width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  /* flex-wrap: wrap; */
+flex-direction: column;
+  flex: 30%;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: center;
 }
 
 .post-entry h2 {
   margin: 0.5rem 0;
+  font-family: 'Nixie+One', sans-serif;
 }
 
 .post-entry h2 a,
@@ -50,13 +68,44 @@ header h1 a {
 }
 
 .post-entry p {
-  margin: 0;
+	padding: 24px 0;
   font-weight: 400;
+  display: flex;
 }
 
 .post-entry h2 a:hover {
-  color: red;
+  color: green;
 }
-.postss{
-    border: 1px;
+
+.main {
+	background-color: gray;
+	width: 100%;
+	padding: 24px 0;
+	/* margin: 0 auto; */
+	display: flex;
+	justify-content: center;
+
+}
+.main__posts{
+	/* margin: auto; */
+	width: 40%;
+    background-color: pink;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	/* align-items: center; */
+	justify-content: center;
+}
+
+footer {
+	background-color: yellow;
+}
+
+.main__posts__post {
+	background-color: #fff;
+}
+
+.main__post__img {
+	width: 100%;
+	border-radius: 3px;
 }

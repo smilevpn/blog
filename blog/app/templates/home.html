@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
-
 {% block content %}
   {% for post in object_list %}
+  <div class="test">
   <div class="post-entry">
-    <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+	<h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+	<img class="main__post__img" src="https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=1800&t=st=1698880867~exp=1698881467~hmac=d0d2f0473aad48b1cf77f1a088986ff5e20c3f81b7101a9b1be11965477c052c" alt="">
     <p>{{ post.body }}</p>
+	<button>
+		Читать далее
+	</button>
   </div>
+</div>
   {% endfor %}
 {% endblock content %}
