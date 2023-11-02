@@ -4,11 +4,14 @@
   <div class="test">
   <div class="post-entry">
 	<h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-	<img class="main__post__img" src="https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=1800&t=st=1698880867~exp=1698881467~hmac=d0d2f0473aad48b1cf77f1a088986ff5e20c3f81b7101a9b1be11965477c052c" alt="">
-    <p>{{ post.body }}</p>
+	<p>{{ post.author }} {{ post.published }}</p>
+	<img class="main__post__preimg" src="{{ post.preimage.url }}" alt="" width="900px">
+    <p>{{ post.prebody }}</p>
+	<form action="{% url 'post_detail' post.pk %}">
 	<button>
 		Читать далее
 	</button>
+</form>
   </div>
 </div>
   {% endfor %}
