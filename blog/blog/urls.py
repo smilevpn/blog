@@ -21,6 +21,7 @@ from . import views as core_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path("app/", include("app.urls")),
     path('', core_views.index, name='index'),
 ]

@@ -3,6 +3,6 @@
 {% block content %}
   <div class="post-entry">
     <h2>{{ object.title }}</h2>
-    <p>{{ object.body }}</p>
+    <p>{{ object.body|safe }}</p>
   </div>
 {% endblock content %}
