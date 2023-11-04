@@ -151,3 +151,21 @@ form {
 .post-entry__prepost{
 	padding: 0 8%;
 }
+
+@media (max-width: 1920px){
+	.main__posts{
+		width: 60%;
+	}
+}
+
+@media (max-width: 1500px){
+	.main__posts{
+		width: 75%;
+	}
+}
+
+@media (max-width: 800px){
+	.main__posts{
+		width: 90%;
+	}
+}
