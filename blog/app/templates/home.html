@@ -4,14 +4,16 @@
   <div class="test">
   <div class="post-entry">
 	<h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-	<p>{{ post.author }} {{ post.published }}</p>
+	<p class="post-entry__author">{{ post.author }} {{ post.published }}</p>
 	<img class="main__post__preimg" src="{{ post.preimage.url }}" alt="" width="900px">
-    <p>{{ post.prebody }}</p>
+    <div class="post-entry__prepost">
+	<p>{{ post.prebody }}</p>
 	<form action="{% url 'post_detail' post.pk %}">
-	<button>
+	<button class="post-entry__button">
 		Читать далее
 	</button>
 </form>
+</div>
   </div>
 </div>
   {% endfor %}

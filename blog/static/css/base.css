@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nixie+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 * {
     margin: 0;
     padding: 0;
+	font-family: 'Montserrat', sans-serif;
     /*display: flex;*/
     /*flex-direction: column;*/
 }
 body {
 
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
-    background-color: #99ff00;
+    background-color: #fff;
+	color: #262626;
 }
 
 header {
@@ -48,37 +48,46 @@ header h1 a {
 	width: 100%;
   margin: 1rem 0;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 flex-direction: column;
   flex: 30%;
-  font-family: 'Montserrat', sans-serif;
   justify-content: center;
+  align-items: center;
 }
 
 .post-entry h2 {
   margin: 0.5rem 0;
-  font-family: 'Nixie+One', sans-serif;
+  line-height: 1.342;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .post-entry h2 a,
 .post-entry h2 a:visited {
-  color: blue;
+  color: #262626;
   text-decoration: none;
+  font-size: 38px;
 
+}
+
+.post-entry__author {
+	font-size: 18px;
 }
 
 .post-entry p {
 	padding: 24px 0;
   font-weight: 400;
   display: flex;
+  font-size: 21px;
+  line-height: 1.81;
 }
 
 .post-entry h2 a:hover {
-  color: green;
+  color: #666666;
 }
 
 .main {
-	background-color: gray;
+	background-color: #fff;
 	width: 100%;
 	padding: 24px 0;
 	/* margin: 0 auto; */
@@ -98,7 +107,16 @@ flex-direction: column;
 }
 
 footer {
-	background-color: yellow;
+	text-align: center;
+	background-color: #fff;
+	margin: 24px 0 0;
+	padding: 0 0 24px;
+}
+footer strong{
+	font-weight: 900;
+}
+footer p{
+	font-weight: 100;
 }
 
 .main__posts__post {
@@ -107,5 +125,29 @@ footer {
 
 .main__post__preimg {
 	width: 100%;
-	border-radius: 3px;
+	border-radius: 4px;
+	object-fit: contain;
+}
+form {
+	display: flex;
+	justify-content: center;
+}
+.post-entry__button{
+	display: inline-block;
+	text-decoration: none;
+	border: solid 1px #E0E0E0;
+	font-weight: 700;
+	border-radius: 4px;
+	transition: color 0.2s,border-color 0.2s;
+	padding: 18px 24px;
+	background-color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+}
+.post-entry__button:hover{
+	border: solid 1px #262626;
+}
+
+.post-entry__prepost{
+	padding: 0 8%;
 }
