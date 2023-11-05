@@ -152,6 +152,12 @@ form {
 	padding: 0 8%;
 }
 
+.pagination{
+	display: flex;
+	justify-content: center;
+	margin: 24px 0 0;
+}
+
 @media (max-width: 1920px){
 	.main__posts{
 		width: 50%;
