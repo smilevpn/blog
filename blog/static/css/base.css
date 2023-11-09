@@ -220,7 +220,7 @@ a.pagination__link:visited{
     border-radius: 4px;
     transition: all .2s ease-in-out;
     font-family: Roboto, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #262626;
 	text-decoration: none;
 }
@@ -280,8 +280,8 @@ a.pagination__link:visited{
 }
 
 .pagination__item.active .pagination__link {
-    border-color: #262626;
 	pointer-events: none;
+	background-color: #E0E0E0;
 }
 
 .pagination__item--dots .pagination__link {
