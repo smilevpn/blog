@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['blog.maylov.ru', 'localhost',  '192.168.10.164', 'maylov.ru', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ['https://*.maylov.ru']
+
 # Application definition
 
 INSTALLED_APPS = [
