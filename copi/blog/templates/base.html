@@ -1,0 +1,26 @@
+<!-- templates/index.html -->
+{% load static %}
+<html>
+  <head>
+    <title>Django blog</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1><a href="{% url 'home' %}">Django blog</a></h1>
+    </header>
+    <main class="main">
+    <div class="main__posts">
+      <div class="main__posts__post">
+      {% block content %}
+      {% endblock content %}
+      </div>
+    </div>
+    </main>
+    <footer>
+    <div>
+            <p><strong>© 2023 smilevpn.</strong> Все права защищены</p>
+    </div>
+	</footer>
+  </body>
+</html>
