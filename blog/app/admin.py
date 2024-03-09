@@ -14,3 +14,4 @@ class PostAdmin(admin.ModelAdmin):
     form = PostAdminForm
 
 admin.site.register(Post, PostAdmin)
+

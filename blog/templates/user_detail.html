@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+{% if profile.avatar %}
+    <p><img src="{{ profile.avatar.url }}"></img></p>
+{% endif %}
+{% endblock content %}
