@@ -19,18 +19,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from app import views as app_views
+from . import views as core_views
 
 urlpatterns = [
-    path('', app_views.BlogListView.as_view(), name='index'),
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path("app/", include("app.urls")),
-<<<<<<< HEAD
     path('profile/', include("profiles.urls")),
     path('', core_views.index, name='index'),
-=======
->>>>>>> refs/remotes/origin/master
 ]
 
 if settings.DEBUG:
