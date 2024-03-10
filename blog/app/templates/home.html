@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
   {% for post in object_list %}
   <div class="test">
   <div class="post-entry">
 	<h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-	<p class="post-entry__author">{{ post.author }} {{ post.published }}</p>
+	<p class="post-entry__author"> <img src="{% static post.author.avatar.url %}"> {{ post.author }} {{ post.published }}</p>
 	<img class="main__post__preimg" src="{{ post.preimage.url }}" alt="" width="900px">
     <div class="post-entry__prepost">
 	<p>{{ post.prebody }}</p>
