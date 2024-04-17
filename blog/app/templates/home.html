@@ -5,7 +5,7 @@
   <div class="test">
   <div class="post-entry">
 	<h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-	<p class="post-entry__author"> <img src="{% static profile.avatar.currently.url %}"> <img src="http://127.0.0.1:8000/media/static/images/profiles/avatar.jpg" width="50" border-radius="50"> {{ post.author }} {{ post.published }}</p>
+	<p class="post-entry__author"> <img src="{{ profiles.avatar.currently.url }}"> <img class="avatar" src="http://127.0.0.1:8000/media/static/images/profiles/avatar.jpg" width="50" style="border-radius:50%"> &nbsp {{ post.author }} {{ post.published }}</p>
 	<img class="main__post__preimg" src="{{ post.preimage.url }}" alt="" width="900px">
     <div class="post-entry__prepost">
 	<p>{{ post.prebody }}</p>

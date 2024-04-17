@@ -144,7 +144,11 @@ flex-direction: column;
 
 }
 
-.post-entry__author {
+.post-entry .post-entry__author {
+	display:flex; 
+	text-align: center; 
+	justify-content: center; 
+	align-items: center;
 	font-size: 18px;
 }
 
