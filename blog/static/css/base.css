@@ -68,6 +68,7 @@ header {
   /* background-color: #fff; */
   /* color: #666666; */
   border-bottom: #fff 1px solid;
+  margin-bottom: -1px;
 }
 
 .header__content {
@@ -96,12 +97,15 @@ header {
 .header__content__subscription__button {
   margin: 20px auto 0;
   background-color: orange;
-  padding: 10px;
+  padding: 18px 24px;
   color: white;
   font-size: 1.2em;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 4px;
   border: 0;
+  transition: color 0.2s, background-color 0.2s;
+
+  font-size: 18px;
 }
 
 .header__content__subscription__button:hover {
