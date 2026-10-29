@@ -455,3 +455,14 @@ a.pagination__link:visited {
 	justify-content: center;
 	border: none;
 }
+
+.main_posts_post img,
+.post-body img, 
+article img, 
+main img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
