@@ -21,6 +21,37 @@
           <div class="header__content__subscription">
             <p class="header__content__subscription__p">Подпишись на уведомления о новых публикациях на электронную почту</p>
             <button class="header__content__subscription__button">subscribe</button>
+
+			<button id="subscribeBtn">Подписаться</button>
+
+<div id="subscribeModal" style="display:none;">
+    <form id="subscribeForm">
+        <input type="email" name="email" placeholder="Введите Email" required>
+        <button type="submit">OK</button>
+    </form>
+</div>
+
+<script>
+document.getElementById('subscribeBtn').onclick = () => {
+    document.getElementById('subscribeModal').style.display = 'block';
+};
+
+document.getElementById('subscribeForm').onsubmit = async (e) => {
+    e.preventDefault();
+    let formData = new FormData(e.target);
+
+    let response = await fetch("{% url 'subscribe' %}", {
+        method: "POST",
+        body: formData,
+        headers: { "X-CSRFToken": "{{ csrf_token }}" }
+    });
+
+    let data = await response.json();
+    alert(data.message || data.errors.email);
+};
+</script>
+
+
           </div>
         </div>
       </div>
@@ -35,7 +66,7 @@
     </main>
     <footer>
     <div>
-            <p><strong>© 2023 smilevpn.</strong> Все права защищены</p>
+            <p><strong>© 2025 smilevpn.</strong> Все права защищены</p>
     </div>
 	</footer>
   </body>
