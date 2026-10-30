@@ -20,7 +20,15 @@ def subscribe(request):
         form = SubscribeForm(request.POST)
         if form.is_valid():
             form.save()
-            return JsonResponse({"message": "Вы подписались!"}, status=201)
+            return JsonResponse({"message": "Вы успешно подписались!"}, status=201)
+        
+        # Если форма невалидна, проверяем, не связано ли это с тем, что email уже есть
+        if 'email' in form.errors:
+            for error in form.errors['email']:
+                if "already exists" in error: # Проверяем текст ошибки от Django
+                    return JsonResponse({"message": "Вы уже подписаны на рассылку!"}, status=200)
+        
+        # Если ошибка другая (например, неверный формат email)
         return JsonResponse({"errors": form.errors}, status=400)
-
+        
     return JsonResponse({"error": "Invalid request"}, status=400)
